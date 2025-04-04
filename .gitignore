@@ -1,0 +1,35 @@
+# Composer dependencies
+/vendor/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# SQLite database files
+*.sqlite
+*.db
+*.sqlite3
+# Except example databases for tests
+!tests/*.sqlite
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+/logs/
+*.log
+
+# Cache
+/cache/
+
+# Other
+/node_modules/
+npm-debug.log 

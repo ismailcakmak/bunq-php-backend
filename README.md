@@ -33,6 +33,8 @@ cd chat-application
 composer install
 ```
 
+This will create a `vendor` directory containing all the required dependencies as specified in `composer.json`.
+
 3. Populate the database with sample data (optional):
 
 ```bash
@@ -40,6 +42,15 @@ php bin/init_db.php
 ```
 
 This script will insert sample users, groups, and messages into your database to get you started.
+
+## Deployment Notes
+
+When deploying this project:
+
+1. **Don't commit the `vendor` directory**: The `.gitignore` file is configured to exclude it.
+2. **Dependencies installation**: After cloning the repository on a new system, always run `composer install` to install dependencies.
+3. **Database files**: SQLite database files (*.sqlite) are excluded from version control to keep the repository clean. The application will create the database file automatically when needed.
+4. **Server configuration**: If deploying to a production server, configure your web server (Apache, Nginx) to point to the `public` directory for better security.
 
 ## Configuration
 
